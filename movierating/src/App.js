@@ -3,14 +3,17 @@ import './App.css';
 import { HashRouter, Route } from 'react-router-dom';
 import About from './routes/About';
 import Home from './routes/Home';
+import Navi from './components/Navi';
+import Detail from './routes/Detail';
 
 
 function App(){
   return (
     <HashRouter>  
-        <Route path="/home" component={Home} />
+        <Navi />
+        <Route path="/" exact={true} component={Home} />
         <Route path="/about" component={About} />
- 
+        <Route path= "/movie_detail" component={Detail} />
     </HashRouter>
   );
 }
